@@ -3,4 +3,4 @@ jdk:
   - oraclejdk8
 sudo: false
 script:
-  - mvn eclipse:eclipse
+  - mvn clean install -DskipTests=true
