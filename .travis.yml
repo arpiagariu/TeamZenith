@@ -6,5 +6,5 @@ notifications:
 jdk:
   - oraclejdk8
 sudo: false
-script:
+before_install:
   - mvn clean install -DskipTests=true
