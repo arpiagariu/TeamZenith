@@ -8,6 +8,5 @@ jdk:
 sudo: false
 install: true
 before_script:
-- ./mvnw install -q -U -DskipTests=true -Dmaven.test.redirectTestOutputToFile=true || true
-- ./mvnw install -q -U -DskipTests=true -Dmaven.test.redirectTestOutputToFile=true
+- ./mvnw clean install -pl spring-boot-tools/spring-boot-maven-plugin -Pdefault,full
 script: ./mvnw install -q -nsu -Dmaven.test.redirectTestOutputToFile=true -P '!integration'
