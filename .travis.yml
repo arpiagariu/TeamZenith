@@ -7,5 +7,3 @@ jdk:
   - oraclejdk8
 sudo: false
 install: true
-before_script:
-- mvn clean install -pl spring-boot-tools/spring-boot-maven-plugin -Pdefault,full
