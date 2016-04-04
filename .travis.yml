@@ -6,5 +6,8 @@ notifications:
 jdk:
   - oraclejdk8
 sudo: false
-before_install:
-  - mvn clean install -DskipTests=true
+install: true
+before_script:
+- ./mvnw install -q -U -DskipTests=true -Dmaven.test.redirectTestOutputToFile=true || true
+- ./mvnw install -q -U -DskipTests=true -Dmaven.test.redirectTestOutputToFile=true
+script: ./mvnw install -q -nsu -Dmaven.test.redirectTestOutputToFile=true -P '!integration'
